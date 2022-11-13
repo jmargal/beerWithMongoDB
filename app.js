@@ -6,6 +6,8 @@ require('dotenv').config();
 const app = express()
 // require('./db')
 const cervezas = require('./routes/cervezas')
+const bares = require('./routes/bares')
+const usuarios=require('./routes/usuarios')
 
 // DATABASE CONNECTION
 async function connectAtlas(){
@@ -17,6 +19,8 @@ app.use(express.json())
 
 //ROUTES
 app.use('/cervezas', cervezas)
+app.use('/bares',bares)
+app.use('/usuarios',usuarios)
 
 
 

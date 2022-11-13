@@ -1,6 +1,6 @@
 //DATABASE
 const db = require('diskdb');
-db.connect('./data', ['cervezas','bares'])
+db.connect('./data', ['cervezas','bares','usuarios'])
 
 if (!db.cervezas.find().length) {
     const cerveza = [{
